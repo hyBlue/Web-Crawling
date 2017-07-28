@@ -46,7 +46,6 @@ with Image.open('python.png') as im1:
         width = max(im1.width, im2.width)
         height = sum([im1.height, im2.height])
         size = (width, height)
-
         with Image.new('RGB', size, WHITE) as canvas:
             canvas.paste(im1, box=(0, 0)) # left/top 지정
             canvas.paste(im2, box=(0, im1.height)) # left/top 지정
